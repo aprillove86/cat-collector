@@ -2,9 +2,9 @@
 {% block content %}
 
 <h1>Cat List</h1>
-{% for cat in cats %}
+
     <div class='card'>
-        <a href="{% url 'detail' cat.id %}">
+        
         <div class="'card-content">
             <span class="'card-title">{{ cat.name }}</span>
             <p>Breed: {{ cat.breed }}</p>
@@ -15,8 +15,8 @@
                 <p>Age: kitten</p>
             {% endif %}
         </div>
-        </a>
+       
     </div>
 
-{% endfor %}
+
 {% endblock %}
