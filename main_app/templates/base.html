@@ -5,12 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Cat Collector</title>
+    <title>Cat Collector | Toys</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src='{% static "js/script.js" %}'></script>
   </head>
   <body>
     <header class="navbar-fixed">
@@ -23,7 +26,10 @@
           </ul>
           <ul class="right">
             <li><a href='{% url "about" %}'>About</a></li>
+            <li><a href='{% url "cats_create" %}'>Add a Cat</a></li>
             <li><a href='{% url "index" %}'>View All My Cats</a></li>
+            <li><a href='{% url "toys_create" %}'>Add a Toy</a></li>
+            <li><a href='{% url "toys_index" %}'>View All Toys</a></li>
           </ul>
         </div>
       </nav>
@@ -31,7 +37,7 @@
     <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer">
       <div class="right">
-        All Rights Reserved, &copy; 2022 Cat Collector &nbsp;
+        All Rights Reserved, &copy; 2022 Cat Collector | Toys &nbsp;
       </div>
     </footer>
   </body>
